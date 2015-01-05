@@ -1,0 +1,67 @@
+@import "global";
+
+@import "inc/normalize";
+
+html {
+	box-sizing: border-box;
+	@include rhythm-normalize();
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+/*
+Layout
+*/
+html {
+	overflow-x: auto;
+	min-width: $page_wrap_width;
+}
+body {
+	background: #f7f6f4 url('../images/bg_pattern.png') repeat;
+	overflow-x: hidden;
+	min-width: $page_wrap_width;
+}
+
+.main_header {
+	max-width: 1500px;
+	min-height: 200px;
+	margin: 0 auto;
+	min-width: $page_wrap_width;
+	background: url( '../images/header_bg_man.png' ) center top no-repeat;
+	position: relative;
+
+		&::before {
+			content: '';
+			background: url( '../images/header_bg_plain.png' ) left top no-repeat;
+			width: 1500px;
+			height: 200px;
+			position: absolute;
+			right: 100%;
+			top: 0;
+		}
+
+		&::after {
+			content: '';
+			background: url("../images/header_bg_plain.png") left top no-repeat;
+			width: 1500px;
+			height: 200px;
+			position: absolute;
+			right: -1500px;
+			top: 0;
+		}
+	}
+	.main_header__inner {
+		width: $page_wrap_width;
+		margin: 0 auto;
+	}
+	.main_header__quick_menu {
+		position: relative;
+		top: 50px;
+		}

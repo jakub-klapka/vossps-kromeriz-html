@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/*
+Rhythm
+*/
+@import "inc/rhythm";
+@include rhythm-init(16px, ( 19/16 ), 'golden section');
+
+/*
+Vars
+*/
+$page_wrap_width: 960px;
+
+/*
+Mixins
+*/
+@mixin respond-to( $key, $value: null ) {
+	@if( $key == 'max-width' ){
+		@media only screen and (max-width: $value) {
+			@content;
+		}
+	}
+	@else if( $key == 'page_wrap' ) {
+		@media only screen and (max-width: $page_wrap_width) {
+			@content;
+		}
+	}
+}
