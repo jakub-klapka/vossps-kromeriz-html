@@ -11,17 +11,46 @@
 <header class="main_header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 	<div class="main_header__inner">
 
-		<nav class="main_header__quick_menu">
+		<nav class="main_header__quick_menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 			<ul class="main_header__quick_menu__ul">
-				<li class="main_header__quick_menu__ul__item"><a href="">Hlavní strana</a></li>
-				<li class="main_header__quick_menu__ul__item"><a href="">Studium</a></li>
-				<li class="main_header__quick_menu__ul__item"><a href="">Obecně o škole</a></li>
-				<li class="main_header__quick_menu__ul__item"><a href="">Dokumenty školy</a></li>
+				<li class="main_header__quick_menu__ul__item">
+					<a href="" itemprop="name url">
+						<svg class="main_header__quick_menu__ul__item__icon" aria-hidden="true"><use xlink:href="../build/images/svg_sprite.svg#icon-home"></use></svg>
+						Hlavní strana
+					</a>
+				</li>
+				<li class="main_header__quick_menu__ul__item">
+					<a href="" itemprop="name url">
+						<svg class="main_header__quick_menu__ul__item__icon" aria-hidden="true"><use xlink:href="../build/images/svg_sprite.svg#icon-books"></use></svg>
+						Studium
+					</a>
+					<ul class="main_header__quick_menu__ul__item__submenu" itemscope itemtype="http://schema.org/SiteNavigationElement">
+						<li class="main_header__quick_menu__ul__item__submenu__item"><a href="" itemprop="name url">Středoškolské</a></li>
+						<li class="main_header__quick_menu__ul__item__submenu__item"><a href="" itemprop="name url">Vyšší odborné</a></li>
+						<li class="main_header__quick_menu__ul__item__submenu__item"><a href="" itemprop="name url">Další vzdělávání</a></li>
+					</ul>
+				</li>
+				<li class="main_header__quick_menu__ul__item">
+					<a href="" itemprop="name url">
+						<svg class="main_header__quick_menu__ul__item__icon" aria-hidden="true"><use xlink:href="../build/images/svg_sprite.svg#icon-info"></use></svg>
+						Obecně o škole
+					</a>
+				</li>
+				<li class="main_header__quick_menu__ul__item">
+					<a href="" itemprop="name url">
+						<svg class="main_header__quick_menu__ul__item__icon" aria-hidden="true"><use xlink:href="../build/images/svg_sprite.svg#icon-documents"></use></svg>
+						Dokumenty školy
+					</a>
+				</li>
 			</ul>
 		</nav>
 
 	</div>
 </header>
 
+<script type="text/javascript" src="js/libs/jquery-2.1.3.js"></script>
+<script type="text/javascript" src="js/libs/velocity.js"></script>
+
+<script type="text/javascript" src="js/header_menu.js"></script><!-- jquery, velocity -->
 </body>
 </html>

@@ -3,6 +3,7 @@ var gulp = require( 'gulp' ),
 	autoprefixer = require( 'gulp-autoprefixer' ),
 	plumber = require( 'gulp-plumber' ),
 	imagemin = require( 'gulp-imagemin' ),
+	svg_store = require( 'gulp-svgstore' ),
 	filter = require( 'gulp-filter' ),
 	livereload = require( 'gulp-livereload' );
 
@@ -43,6 +44,36 @@ gulp.task( 'images_watch', function(){
 	gulp.watch( 'src/images/**/*', [ 'images' ] );
 } );
 
+/*
+SVG
+ */
+gulp.task( 'svg', function(){
+	return gulp.src( 'src/svg_sprite/*.svg' )
+		.pipe( plumber( plumber_config ) )
+		.pipe( imagemin() )
+		.pipe( svg_store( {
+			fileName: 'svg_sprite.svg',
+			prefix: 'icon-'
+		} ) )
+		.pipe( gulp.dest( 'build/images' ) );
+} );
+gulp.task( 'svg_watch', function(){
+	gulp.watch( 'src/svg_sprite/**/*', [ 'svg' ] );
+} );
+
+
+/*
+Fonts
+ */
+gulp.task( 'fonts', function() {
+	return gulp.src( 'src/fonts/**/*', { base: 'src/fonts' } )
+		.pipe( gulp.dest( 'build/fonts' ) );
+} );
+gulp.task( 'fonts_watch', function(){
+	gulp.watch( 'src/fonts/**/*', [ 'fonts' ] );
+} );
+
+
 
 /*
 Livereload
@@ -57,5 +88,5 @@ gulp.task( 'livereload', function(){
 /*
 Tasks
  */
-gulp.task( 'default', [ 'sass', 'images' ] );
-gulp.task( 'dev', [ 'sass_watch', 'livereload', 'images_watch' ] );
+gulp.task( 'default', [ 'sass', 'images', 'svg', 'fonts' ] );
+gulp.task( 'dev', [ 'sass_watch', 'livereload', 'images_watch', 'svg_watch', 'fonts_watch' ] );

@@ -1,5 +1,7 @@
 @import "global";
 
+@include encode_sans_def();
+
 @import "inc/normalize";
 
 html {
@@ -63,5 +65,87 @@ body {
 	}
 	.main_header__quick_menu {
 		position: relative;
-		top: 50px;
+		top: 40px;
+		left: 40px;
+		width: 160px;
 		}
+		.main_header__quick_menu__ul {
+
+			}
+			.main_header__quick_menu__ul__item {
+				color: #FFF;
+				text-decoration: none;
+				display: block;
+				font-family: $encode_sans;
+				font-size: 13px;
+				padding: 6px 0;
+				transition: color 200ms;
+				position: relative;
+
+					a {
+						color: inherit;
+						text-decoration: inherit;
+						line-height: inherit;
+						display: inline-block;
+					}
+
+					&:hover {
+						color: #dddddd;
+					}
+
+				}
+				.main_header__quick_menu__ul__item__icon {
+					width: 20px;
+					height: 20px;
+					display: inline-block;
+					margin-right: 10px;
+					vertical-align: middle;
+					margin-top: -5px;
+				}
+				.main_header__quick_menu__ul__item__submenu {
+					position: absolute;
+					display: none;
+					left: 140px;
+					top: 5px;
+					transform: translateY( -50% );
+					background: $bubble_orange;
+					border-radius: 150px;
+					padding: 20px 20px;
+					box-shadow: 5px 5px 20px rgba( 0, 0, 0, 0.8 );
+
+						&::after {
+							content: '';
+							position: absolute;
+							left: -45px;
+							top: 50%;
+							width: 0;
+							height: 0;
+							border-style: solid;
+							border-width: 10px 50px 10px 0;
+							border-color: transparent $bubble_orange transparent transparent;
+						}
+
+					}
+					.main_header__quick_menu__ul__item__submenu__item {
+						display: block;
+						white-space: nowrap;
+
+							a {
+								font-size: inherit;
+								color: #FFF;
+
+									&:hover {
+										text-decoration: underline;
+									}
+							}
+
+							&::before {
+								content: '';
+								display: inline-block;
+								width: 5px;
+								height: 5px;
+								background: $main_orange;
+								border-radius: 5px;
+								margin-right: 5px;
+							}
+					}
