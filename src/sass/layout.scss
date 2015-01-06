@@ -62,6 +62,7 @@ body {
 	.main_header__inner {
 		width: $page_wrap_width;
 		margin: 0 auto;
+		position: relative;
 	}
 	.main_header__quick_menu {
 		position: relative;
@@ -72,15 +73,22 @@ body {
 		.main_header__quick_menu__ul {
 
 			}
-			.main_header__quick_menu__ul__item {
+			%header_link {
 				color: #FFF;
 				text-decoration: none;
-				display: block;
 				font-family: $encode_sans;
 				font-size: 13px;
-				padding: 6px 0;
 				transition: color 200ms;
 				position: relative;
+
+					&:hover {
+						color: #dddddd;
+					}
+			}
+			.main_header__quick_menu__ul__item {
+				@extend %header_link;
+				display: block;
+				padding: 6px 0;
 
 					a {
 						color: inherit;
@@ -89,18 +97,17 @@ body {
 						display: inline-block;
 					}
 
-					&:hover {
-						color: #dddddd;
-					}
-
 				}
-				.main_header__quick_menu__ul__item__icon {
+				%header_icons {
 					width: 20px;
 					height: 20px;
 					display: inline-block;
 					margin-right: 10px;
 					vertical-align: middle;
 					margin-top: -5px;
+				}
+				.main_header__quick_menu__ul__item__icon {
+					@extend %header_icons;
 				}
 				.main_header__quick_menu__ul__item__submenu {
 					position: absolute;
@@ -149,3 +156,47 @@ body {
 								margin-right: 5px;
 							}
 					}
+
+	$tagline_right: 200px;
+	.main_header__tagline {
+		display: block;
+		position: absolute;
+		right: $tagline_right;
+		top: 50px;
+		text-align: right;
+		color: #772c12;
+		font-family: $encode_sans;
+		font-weight: bold;
+		line-height: 1.2em;
+		font-size: 18px;
+		text-shadow: 0 0 3px #ee9310;
+	}
+
+	.main_header__photo_link {
+		@extend %header_link;
+		position: absolute;
+		right: $tagline_right;
+		top: 140px;
+		}
+		.main_header__photo_link__image {
+			@extend %header_icons;
+			margin-left: 5px;
+			margin-right: 0;
+		}
+
+	.main_header__logo {
+		position: absolute;
+		right: 0;
+		top: 0;
+		padding: 60px 20px 10px 20px;
+		background: #eef6fa;
+		border-color: #FFF;
+		border-width: 2px;
+		border-style: none solid solid solid;
+		box-shadow: inset 10px -10px 20px 10px rgba( 0,0,0,0.1 ),
+					0 10px  25px -10px rgba( 0,0,0,0.5 );
+		}
+		.main_header__logo__image {
+			width: 137px;
+			height: 80px;
+		}

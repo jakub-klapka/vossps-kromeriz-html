@@ -33,6 +33,22 @@ Mixins
 @mixin encode_sans_def() {
 	@font-face {
 		font-family: 'encode_sans';
+		src: url('../fonts/encodesans-bold-webfont.eot');
+		src: url('../fonts/encodesans-bold-webfont.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/encodesans-bold-webfont.woff2') format('woff2'),
+		url('../fonts/encodesans-bold-webfont.woff') format('woff'),
+		url('../fonts/encodesans-bold-webfont.ttf') format('truetype'),
+		url('../fonts/encodesans-bold-webfont.svg#encode_sansbold') format('svg');
+		font-weight: bold;
+		font-style: normal;
+
+	}
+
+
+
+
+	@font-face {
+		font-family: 'encode_sans';
 		src: url('../fonts/encodesans-regular-webfont.eot');
 		src: url('../fonts/encodesans-regular-webfont.eot?#iefix') format('embedded-opentype'),
 		url('../fonts/encodesans-regular-webfont.woff2') format('woff2'),
