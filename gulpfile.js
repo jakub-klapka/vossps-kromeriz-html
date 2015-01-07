@@ -80,7 +80,7 @@ Livereload
  */
 gulp.task( 'livereload', function(){
 	livereload.listen();
-	gulp.watch( [ 'build/**/*', 'src/*.html' ], function ( evt ) {
+	gulp.watch( [ 'build/**/*', 'src/*.html', 'src/js/**/*' ], function ( evt ) {
 		livereload.changed( evt.path );
 	} );
 } );

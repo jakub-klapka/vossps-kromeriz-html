@@ -38,6 +38,7 @@ body {
 	min-width: $page_wrap_width;
 	background: url( '../images/header_bg_man.png' ) center top no-repeat;
 	position: relative;
+	z-index: 20;
 
 		&::before {
 			content: '';
@@ -199,4 +200,73 @@ body {
 		.main_header__logo__image {
 			width: 137px;
 			height: 80px;
+		}
+
+@import "inc/owl.carousel";
+
+.main_slider {
+	margin-top: -31px;
+	z-index: 10;
+	position: relative;
+	}
+
+	$slider_height: 340px;
+	.owl-item {
+		position: relative;
+		height: $slider_height;
+		overflow: hidden;
+
+			img {
+				height: $slider_height;
+				width: auto;
+				display: block;
+				position: absolute;
+				left: 50%;
+				transform: translateX( -50% );
+			}
+	}
+
+	.main_slider__item__text {
+		$width: $page_wrap_width - 200px;
+		width: $width;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate( -50%, -50% );
+		text-align: center;
+
+		font-family: $encode_sans;
+		font-size: 19px;
+		line-height: 1.2em;
+		color: #FFF;
+		text-shadow: 2px 2px 2px #000;
+		}
+		.main_slider__item__text__tagline {
+			font-weight: bold;
+			font-size: 60px;
+			line-height: 1.2em;
+			margin: 0;
+		}
+
+	.owl-pagination {
+		z-index: 20;
+		position: absolute;
+		top: 40px;
+		right: 50%;
+		margin-right: -($page_wrap_width/2);
+		}
+		$pagination_bullet_size: 15px;
+		.owl-page {
+			display: inline-block;
+			width: $pagination_bullet_size;
+			height: $pagination_bullet_size;
+			border: 2px solid #FFF;
+			border-radius: $pagination_bullet_size;
+			margin-left: 10px;
+			background: transparent;
+			transition: background-color 300ms;
+
+				&.active {
+					background-color: #FFF;
+				}
 		}
