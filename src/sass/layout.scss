@@ -273,6 +273,7 @@ body {
 
 .quick_links {
 	background: #FFF;
+	margin-bottom: rhythm(1);
 
 	}
 	.quick_links__wrap {
@@ -338,3 +339,120 @@ body {
 							}
 					}
 			}
+
+.main_content_wrap {
+	width: $page_wrap_width;
+	margin: 0 auto;
+
+		&::after {
+			content: '';
+			display: table;
+			clear: both;
+		}
+}
+
+.main_sidebar {
+	float: left;
+	width: $sidebar_width;
+
+	}
+	.main_sidebar__nav {
+
+		}
+		.main_sidebar__nav__ul {
+			display: block;
+
+			}
+			.main_sidebar__nav__ul__item {
+				display: block;
+				margin-bottom: rhythm(1);
+
+					a {
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						align-items: center;
+						height: $sidebar_width;
+						text-decoration: none;
+						color: #FFF;
+						font-size: 20px;
+						font-family: $encode_sans;
+						font-weight: bold;
+						text-align: center;
+						padding: 0 10px;
+						transition: background-color 300ms;
+						flex: 1 0 auto;
+
+						white-space: normal;
+
+							.no-flexbox & {
+								display: block;
+							}
+
+							span {
+								max-width: 100%; //IE flexbox fix
+								display: block;
+							}
+					}
+
+					$types: (
+						stredoskolske: (
+							main: $stredoskolske,
+							light: $stredoskolske_light
+						),
+						vyssi: (
+							main: $vyssi,
+							light: $vyssi_light
+						),
+						dalsi: (
+							main: $dalsi,
+							light: $dalsi_light
+						)
+					);
+
+					@each $type, $colors in $types {
+
+						&.is-#{$type} {
+							a {
+								background: map-get( $colors, 'main' );
+
+								&:hover {
+									background: darken( map-get( $colors, 'main' ) , 5%);
+
+										.main_sidebar__nav__ul__item__icon {
+											background: darken( map-get( $colors, 'light' ), 5% );
+										}
+								}
+							}
+							.main_sidebar__nav__ul__item__icon {
+								background: map-get( $colors, 'light' );
+							}
+						}
+					}
+
+
+				}
+				.main_sidebar__nav__ul__item__icon {
+					$icon_size: 50px;
+					color: #FFF;
+					padding: 20px;
+					border-radius: 100%;
+					display: inline-block;
+					margin-bottom: rhythm(1);
+					transition: background-color 300ms;
+
+						svg {
+							width: $icon_size;
+							height: $icon_size;
+						}
+
+						.no-flexbox & {
+							display: block;
+						}
+				}
+
+
+.main_content {
+	float: right;
+	width: ( $page_wrap_width - $sidebar_width - rhythm(2) );
+}
