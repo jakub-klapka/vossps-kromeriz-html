@@ -138,12 +138,12 @@
 
 <div class="main_content_wrap">
 
-	<aside class="main_sidebar">
+	<aside class="main_sidebar" role="complementary">
 
-		<nav class="main_sidebar__nav">
+		<nav class="main_sidebar__nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 			<ul class="main_sidebar__nav__ul">
 				<li class="main_sidebar__nav__ul__item is-stredoskolske">
-					<a href="">
+					<a href="" itemprop="name url">
 						<div class="main_sidebar__nav__ul__item__icon" aria-hidden="true">
 							<svg><use xlink:href="#icon-books"></use></svg>
 						</div>
@@ -151,7 +151,7 @@
 					</a>
 				</li>
 				<li class="main_sidebar__nav__ul__item is-vyssi">
-					<a href="">
+					<a href="" itemprop="name url">
 						<div class="main_sidebar__nav__ul__item__icon" aria-hidden="true">
 							<svg><use xlink:href="#icon-graduation"></use></svg>
 						</div>
@@ -159,7 +159,7 @@
 					</a>
 				</li>
 				<li class="main_sidebar__nav__ul__item is-dalsi">
-					<a href="">
+					<a href="" itemprop="name url">
 						<div class="main_sidebar__nav__ul__item__icon" aria-hidden="true">
 							<svg><use xlink:href="#icon-presentation"></use></svg>
 						</div>
@@ -171,9 +171,77 @@
 		
 	</aside>
 
-	<article class="main_content">
-		article
-	</article>
+	<section class="main_content content_typo" role="main" itemprop="mainContentOfPage">
+
+		<nav class="main_content__breadcrumbs" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<ul class="main_content__breadcrumbs__menu">
+				<li class="main_content__breadcrumbs__menu__item"><a href="" itemprop="url name">Hlavní strana</a></li>
+				<li class="main_content__breadcrumbs__menu__item"><a href="" itemprop="url name">Aktuality</a></li>
+			</ul>
+		</nav>
+
+		<h1><span class="main_content__icon" aria-hidden="true"><svg><use xlink:href="#icon-teacher_table"></use></svg></span>Aktuality</h1>
+
+		<div class="main_content__news">
+
+			<article class="main_content__news__item" itemscope itemtype="http://schema.org/NewsArticle">
+				<a href="" class="main_content__news__item__image" itemprop="url"><img src="//placehold.it/210x150" alt="" itemprop="image"/></a>
+				<div class="main_content__news__item__description" itemprop="description">
+					<h2 itemprop="name">Lorem ipsum dolor sit.</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et hic inventore molestiae
+						quaerat quam rerum sed suscipit ullam. Cupiditate doloribus excepturi explicabo id repellat.
+						Alias amet aperiam, asperiores, autem cumque distinctio dolores, ducimus eligendi explicabo fuga
+						illum impedit ipsum minus perferendis quasi quibusdam repellat saepe sapiente voluptas
+						voluptate! Alias, at autem debitis dolores eos eveniet ipsum laborum nobis similique voluptatem!
+						Cumque dolorem dolorum fugit inventore mollitia, repudiandae rerum unde velit. Cum dignissimos
+						ipsam ipsum nisi, praesentium quam quis tenetur ut vitae voluptates. Accusamus, aperiam
+						dignissimos dolorem dolores enim incidunt inventore molestiae neque obcaecati placeat qui,
+						quibusdam sequi veritatis voluptate.</p>
+				</div>
+
+				<a class="main_content__news__item__more_link" href="" itemprop="url">Zobrazit více</a>
+
+			</article>
+
+			<article class="main_content__news__item">
+				<div class="main_content__news__item__description">
+					<h2>Lorem ipsum dolor sit.</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et hic inventore molestiae
+						quaerat quam rerum sed suscipit ullam. Cupiditate doloribus excepturi explicabo id repellat.
+						Alias amet aperiam, asperiores, autem cumque distinctio dolores, ducimus eligendi explicabo fuga
+						illum impedit ipsum minus perferendis quasi quibusdam repellat saepe sapiente voluptas
+						voluptate! Alias, at autem debitis dolores eos eveniet ipsum laborum nobis similique voluptatem!
+						Cumque dolorem dolorum fugit inventore mollitia, repudiandae rerum unde velit. Cum dignissimos
+						ipsam ipsum nisi, praesentium quam quis tenetur ut vitae voluptates. Accusamus, aperiam
+						dignissimos dolorem dolores enim incidunt inventore molestiae neque obcaecati placeat qui,
+						quibusdam sequi veritatis voluptate.</p>
+				</div>
+
+				<a class="main_content__news__item__more_link" href="">Zobrazit více</a>
+
+			</article>
+
+			<article class="main_content__news__item">
+				<a href="" class="main_content__news__item__image"><img src="//placehold.it/210x150" alt=""/></a>
+				<div class="main_content__news__item__description">
+					<h2>Lorem ipsum dolor sit.</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum et hic inventore molestiae
+						quaerat quam rerum sed suscipit uore molestiae neque obcaecati placeat qui,
+						quibusdam sequi veritatis voluptate.</p>
+				</div>
+
+				<a class="main_content__news__item__more_link" href="">Zobrazit více</a>
+
+			</article>
+
+
+
+		</div>
+
+	</section>
 
 </div>
 

@@ -70,3 +70,8 @@ Mixins
 
 	}
 }
+
+@mixin separator() {
+	$gradient_grey: lighten( $text_grey, 40% );
+	background-image: linear-gradient( to top, #FFF 0, #FFF 1px, $gradient_grey 1px, $gradient_grey 2px, transparent 2px );
+}
