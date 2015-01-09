@@ -180,7 +180,7 @@
 			</ul>
 		</nav>
 
-		<h1><span class="main_content__icon" aria-hidden="true"><svg><use xlink:href="#icon-teacher_table"></use></svg></span>Aktuality</h1>
+		<h1><span class="heading_icon" aria-hidden="true"><svg><use xlink:href="#icon-teacher_table"></use></svg></span>Aktuality</h1>
 
 		<div class="main_content__news">
 
@@ -290,10 +290,10 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<td>Vladimír Čert</td>
-					<td>573 333 514</td>
-					<td><a href="">nekdo.nekdo@neco.cz</a></td>
+				<tr itemscope itemtype="https://schema.org/Person">
+					<td itemprop="name">Vladimír Čert</td>
+					<td itemprop="telephone">573 333 514</td>
+					<td><a href="" itemprop="email">nekdo.nekdo@neco.cz</a></td>
 					<td>IV.A</td>
 				</tr>
 				<tr>
@@ -321,12 +321,45 @@
 	</div>
 </section>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<section class="o_skole content_typo">
+
+	<h1><span class="heading_icon" aria-hidden="true"><svg><use xlink:href="#icon-building"></use></svg></span>Obecně o škole</h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae expedita impedit soluta. Alias dolor expedita
+		laborum maiores maxime, pariatur possimus quae quaerat quod reiciendis sed sequi similique vitae. Alias
+		cupiditate deserunt distinctio dolore eius eligendi error, est et, expedita necessitatibus perspiciatis, quaerat
+		quo ratione tempora temporibus vel veniam! Beatae eligendi fuga illum iusto laboriosam laborum porro tempore
+		unde! A ab, ad alias aspernatur aut corporis cumque dignissimos eius et eum eveniet facere facilis fuga impedit
+		incidunt laboriosam laudantium maiores modi natus nemo nisi provident quaerat quas repellendus ullam unde ut
+		vero. Autem excepturi expedita explicabo iusto libero modi similique veniam!</p>
+
+</section>
+
+<footer class="main_footer" role="contentinfo">
+	<div class="main_footer__inner">
+
+		<div class="main_footer__meta">
+			<nav class="main_footer__meta__menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<ul class="main_footer__meta__menu__ul">
+					<li class="main_footer__meta__menu__ul__item"><a href="" itemprop="url name">Obecně o škole</a></li>
+					<li class="main_footer__meta__menu__ul__item"><a href="" itemprop="url name">Kontakty na zaměstnance</a></li>
+					<li class="main_footer__meta__menu__ul__item"><a href="" itemprop="url name">Administrace</a></li>
+				</ul>
+			</nav>
+			&copy; Copyright 2015, Všechna práva vyhrazena.
+		</div>
+
+		<div class="main_footer__copyright">
+			Návrh a grafika: <a href="">www.MarekHorava.cz</a><br/>
+			Programování: <a href="">www.LumiArt.cz</a>
+		</div>
+
+	</div>
+</footer>
+
+
+
+
 <script type="text/javascript" src="js/libs/jquery-2.1.3.js"></script>
 <script type="text/javascript" src="js/libs/velocity.js"></script>
 <script type="text/javascript" src="js/libs/picturefill.js"></script>
