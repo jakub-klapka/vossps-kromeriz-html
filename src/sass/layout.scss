@@ -492,6 +492,7 @@ body {
 		color: #FFF;
 		$color1: $bubble_orange;
 		$color2: lighten( $bubble_orange, 15% );
+		background-color: $color1;
 		background: linear-gradient( 135deg, $color1 0, $color1 50%, $color2 50%, $color2 100% );
 		border-radius: 100%;
 		display: inline-block;
@@ -550,4 +551,159 @@ body {
 				}
 		}
 
+	.main_content__news__pagination.main_content__news__pagination {
+		margin: rhythm(1) 0;
+		float: right;
+		}
+		.main_content__news__pagination__ul {
+			display: block;
+			}
+			.main_content__news__pagination__ul__item.main_content__news__pagination__ul__item {
+				display: inline-block;
+				$size: 30px;
+				width: $size;
+				height: $size;
+				background: $bubble_orange;
+				border: 1px solid #FFF;
+				border-radius: 4px;
+				color: #FFF;
+				line-height: ( $size - 2px );
+				text-align: center;
+				transition: background-color 300ms;
+				font-family: $encode_sans;
+				font-size: 13px;
+				text-shadow: 1px 1px 2px #000;
+
+					a {
+						color: inherit;
+						text-decoration: none;
+						display: block;
+						width: 100%;
+						height: 100%;
+					}
+
+					&:hover,
+					&.is-active {
+						background-color: darken( $bubble_orange, 20% );
+					}
+
+					&.is-dots {
+						background: none;
+						border: none;
+						color: $text_grey;
+
+							&::before {
+								content: '\2026';
+							}
+					}
+
+			}
+
 @import "typo";
+
+$sponsors_margin_width: 10px;
+.sponsors {
+
+	width: ( $page_wrap_width + $sponsors_margin_width);
+	margin: rhythm(1) auto 0 auto;
+	display: flex;
+
+		.no-flexbox & {
+			text-align: center;
+		}
+
+	}
+	.sponsors__item {
+		flex: 1 0 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #FFF;
+		padding: rhythm(1) 0;
+		margin: 0 ( $sponsors_margin_width / 2);
+		border: 1px solid #e8e8ec;
+
+			img {
+				display: block;
+			}
+
+			.no-flexbox & {
+				display: inline-block;
+				padding: 20px 40px;
+			}
+	}
+
+
+.kontakty {
+	background: $dark_grey;
+	margin-top: rhythm(2);
+
+	}
+	.kontakty__inner {
+		width: $page_wrap_width;
+		margin: 0 auto;
+		padding: rhythm(1) 0 rhythm(2) 0;
+		color: lighten( $text_grey, 20% );
+		text-align: center;
+		overflow: hidden;
+	}
+	.kontakty__heading {
+		font-weight: normal;
+		display: inline-block;
+		font-size: 14px;
+		line-height: 1;
+		border: 1px solid $kontakty_lines;
+		padding: 15px 40px;
+		border-radius: 4px;
+		font-family: $encode_sans;
+		color: #FFF;
+		position: relative;
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 100%;
+				width: $page_wrap_width;
+				height: 1px;
+				border-bottom: 1px solid $kontakty_lines;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 100%;
+				width: $page_wrap_width;
+				height: 1px;
+				border-bottom: 1px solid $kontakty_lines;
+			}
+
+	}
+
+	.kontakty__table {
+		margin-top: rhythm(1);
+		width: 100%;
+		text-align: left;
+		font-size: 16px;
+		line-height: 1.2em;
+		font-family: arial, sans-serif;
+
+			tr {
+				height: 3em;
+				border-bottom: 1px solid $kontakty_lines;
+			}
+
+			th {
+				color: $bubble_orange;
+				font-weight: bold;
+			}
+
+			a {
+				color: inherit;
+
+					&:hover {
+						text-decoration: none;
+					}
+			}
+	}
