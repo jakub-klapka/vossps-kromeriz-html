@@ -192,7 +192,7 @@ body {
 		padding: 60px 20px 10px 20px;
 		background: #eef6fa;
 		border-color: #FFF;
-		border-width: 2px;
+		border-width: 1px;
 		border-style: none solid solid solid;
 		box-shadow: inset 10px -10px 20px 10px rgba( 0,0,0,0.1 ),
 					0 10px  25px -10px rgba( 0,0,0,0.5 );
@@ -768,3 +768,35 @@ $footer_link_color: lighten( $text_grey, 50% );
 		float: right;
 		text-align: right;
 	}
+
+.scroll_to_top {
+	position: fixed;
+	bottom: 20px;
+	left: 50%;
+	margin-left: ( $page_wrap_width / 2 ) + 50px;
+	font-size: 0;
+	color: transparent;
+	$size: 30px;
+	width: $size;
+	height: $size;
+	background: $bubble_orange;
+	border: 1px solid #FFF;
+	border-radius: 4px;
+	line-height: ( $size - 5px );
+	text-align: center;
+	transition: background-color 300ms;
+	transform: rotate( -90deg );
+	display: none;
+
+		&::after {
+			content: '\203A';
+			color: #FFF;
+			font-size: 16px;
+			font-family: $encode_sans;
+			text-shadow: 1px 1px 2px #000;
+		}
+
+		&:hover {
+			background-color: darken( $bubble_orange, 20% );
+		}
+}
