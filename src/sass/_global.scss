@@ -78,3 +78,10 @@ Mixins
 	$gradient_grey: lighten( $text_grey, 40% );
 	background-image: linear-gradient( to top, #FFF 0, #FFF 1px, $gradient_grey 1px, $gradient_grey 2px, transparent 2px );
 }
+
+@mixin heading_icon_background( $color ) {
+	$color1: $color;
+	$color2: lighten( $color, 15% );
+	background-color: $color1;
+	background: linear-gradient( 135deg, $color1 0, $color1 50%, $color2 50%, $color2 100% );
+}

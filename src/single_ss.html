@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title itemprop="name">VOS SPS Kroměříž</title>
 
-	<link rel="stylesheet" href="../build/css/layout.css"/>
+	<link rel="stylesheet" href="../build/css/layout.css?v=3"/>
 
 	<script type="text/javascript">
 		var ajax = new XMLHttpRequest();
@@ -62,7 +62,7 @@
 			a Střední pedagogická škola Kroměříž</h2>
 
 		<a class="main_header__photo_link" href="">
-			Fotografie školy
+			Fotogalerie
 			<svg class="main_header__photo_link__image" aria-hidden="true"><use xlink:href="#icon-photos"></use></svg>
 		</a>
 
@@ -73,31 +73,7 @@
 	</div>
 </header>
 
-<section class="main_slider" id="main_slider">
-	<div class="main_slider__item">
-		<img alt="" srcset="//placehold.it/1980x340 1980w, //placehold.it/1500x340 1500w, //placehold.it/1024x340 1024w, //placehold.it/960x340 960w" />
-		<div class="main_slider__item__text">
-			<h2 class="main_slider__item__text__tagline">Lorem ipsum dolor sit.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, sit!</p>
-		</div>
-	</div>
-	<div class="main_slider__item">
-		<img alt="" srcset="//placehold.it/1980x340 1980w, //placehold.it/1500x340 1500w, //placehold.it/1024x340 1024w, //placehold.it/960x340 960w" />
-		<div class="main_slider__item__text">
-			<h2 class="main_slider__item__text__tagline">Lorem.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci at aut beatae culpa cum debitis delectus dicta, dignissimos distinctio eum excepturi facere facilis id illum minima molestias mollitia nesciunt non nostrum possimus quaerat quam, quis quo ratione recusandae repellat sed similique veniam voluptate voluptatum? Aut facilis minus quia temporibus voluptas?</p>
-		</div>
-	</div>
-	<div class="main_slider__item">
-		<img alt="" srcset="//placehold.it/1980x340 1980w, //placehold.it/1500x340 1500w, //placehold.it/1024x340 1024w, //placehold.it/960x340 960w" />
-		<div class="main_slider__item__text">
-			<h2 class="main_slider__item__text__tagline">Lorem ipsum dolor sit.</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, sit!</p>
-		</div>
-	</div>
-</section>
-
-<section class="quick_links">
+<section class="quick_links is-wo_slider">
 	<div class="quick_links__wrap">
 
 		<div class="quick_links__wrap__item">
@@ -138,12 +114,12 @@
 
 <div class="main_content_wrap">
 
-	<aside class="main_sidebar">
+	<aside class="main_sidebar" role="complementary">
 
-		<nav class="main_sidebar__nav">
+		<nav class="main_sidebar__nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 			<ul class="main_sidebar__nav__ul">
 				<li class="main_sidebar__nav__ul__item is-stredoskolske">
-					<a href="">
+					<a href="" itemprop="name url">
 						<div class="main_sidebar__nav__ul__item__icon" aria-hidden="true">
 							<svg><use xlink:href="#icon-books"></use></svg>
 						</div>
@@ -151,7 +127,7 @@
 					</a>
 				</li>
 				<li class="main_sidebar__nav__ul__item is-vyssi">
-					<a href="">
+					<a href="" itemprop="name url">
 						<div class="main_sidebar__nav__ul__item__icon" aria-hidden="true">
 							<svg><use xlink:href="#icon-graduation"></use></svg>
 						</div>
@@ -159,7 +135,7 @@
 					</a>
 				</li>
 				<li class="main_sidebar__nav__ul__item is-dalsi">
-					<a href="">
+					<a href="" itemprop="name url">
 						<div class="main_sidebar__nav__ul__item__icon" aria-hidden="true">
 							<svg><use xlink:href="#icon-presentation"></use></svg>
 						</div>
@@ -171,9 +147,16 @@
 		
 	</aside>
 
-	<article class="main_content content_typo">
+	<article class="main_content content_typo" role="main" itemprop="mainContentOfPage">
 
-		<h1>HTML Ipsum Presents</h1>
+		<nav class="main_content__breadcrumbs" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<ul class="main_content__breadcrumbs__menu">
+				<li class="main_content__breadcrumbs__menu__item"><a href="" itemprop="url name">Hlavní strana</a></li>
+				<li class="main_content__breadcrumbs__menu__item"><a href="" itemprop="url name">Středoškolské vzdělání</a></li>
+			</ul>
+		</nav>
+
+		<h1><span class="heading_icon" aria-hidden="true"><svg><use xlink:href="#icon-books"></use></svg></span>Středoškolské studium</h1>
 
 		<p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
@@ -193,13 +176,46 @@
 			<li>Aliquam tincidunt mauris eu risus.</li>
 		</ul>
 
-<pre><code>
-	#header h1 a {
-	display: block;
-	width: 300px;
-	height: 80px;
-	}
-</code></pre>
+		<h1>Test tabulek</h1>
+
+		<h2 class="important_heading">Semináře pro sociální pracovníky a pracovníky v sociálních službách</h2>
+
+		<h3>Akreditace vzdělávací instituce: č. 2012/1160-I - nadpis úrovně 3</h3>
+
+		<table>
+			<thead>
+				<tr>
+					<th><p>název semináře</p></th>
+					<th><p>datum konání</p></th>
+					<th><p>termín přihlášení</p></th>
+					<th><p>počet hodin</p></th>
+					<th><p>cena</p></th>
+					<th><p>akreditace MPSV</p></th>
+					<th><p>kontaktní osoba</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><p><strong>Psychologie stárnutí pro sociální pracovníky</strong></p></td>
+					<td><p>17.4.&nbsp;-&nbsp;18.4.2014</p></td>
+					<td><p>7.4.2014</p></td>
+					<td><p>16</p></td>
+					<td><p>2&nbsp;000,-&nbsp;Kč</p></td>
+					<td><p>č. 2013/0228-PC/SP/PP</p></td>
+					<td><p>Mgr. Jana Vítková</p></td>
+				</tr>
+				<tr>
+					<td><p><strong>Psychologie stárnutí pro sociální pracovníky</strong></p></td>
+					<td><p>17.4.&nbsp;-&nbsp;18.4.2014</p></td>
+					<td><p>7.4.2014</p></td>
+					<td><p>16</p></td>
+					<td><p>2&nbsp;000,-&nbsp;Kč</p></td>
+					<td><p>č. 2013/0228-PC/SP/PP</p></td>
+					<td><p>Mgr. Jana Vítková</p></td>
+				</tr>
+			</tbody>
+		</table>
+
 
 		<h2>Image Alignment Tests: Un-Captioned Images</h2>
 		<h3>Center-align, no caption</h3>
@@ -211,17 +227,6 @@
 		<h3>No alignment, no caption</h3>
 		<p>None-aligned image with no caption, and text before and after. <img src="sample_content/test-image-landscape.jpg" alt="" title="test-image-landscape" width="300" height="199" class="alignnone size-full wp-image-535" /> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
 
-		<h2>Image Alignment Tests: Un-Captioned Images with anchors</h2>
-		<h3>Center-align, no caption</h3>
-		<p>Center-aligned image with no caption, and text before and after. <a href="sample_content/test-image-landscape.jpg" ><img src="sample_content/test-image-landscape.jpg" alt="" title="test-image-landscape" width="300" height="199" class="aligncenter size-full wp-image-535" /></a> ALorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
-		<h3>Left-align, no caption</h3>
-		<p>Left-aligned image with no caption, and text before and after. <a href="sample_content/test-image-landscape.jpg" ><img src="sample_content/test-image-landscape.jpg" alt="" title="test-image-landscape" width="300" height="199" class="alignleft size-full wp-image-535" /></a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
-		<h3>Right-align, no caption</h3>
-		<p>Right-aligned image with no caption, and text before and after. <a href="sample_content/test-image-landscape.jpg" ><img src="sample_content/test-image-landscape.jpg" alt="" title="test-image-landscape" width="300" height="199" class="alignright size-full wp-image-535" /></a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
-		<h3>No alignment, no caption</h3>
-		<p>None-aligned image with no caption, and text before and after. <a href="sample_content/test-image-landscape.jpg" ><img src="sample_content/test-image-landscape.jpg" alt="" title="test-image-landscape" width="300" height="199" class="alignnone size-full wp-image-535" /></a> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
-
-
 		<h2>Image Alignment Tests: Captioned Images</h2>
 		<h3>Center-align with Caption</h3>
 		<p>Center-aligned image with caption, and text before and after.</p> <div id="attachment_544" class="wp-caption aligncenter" style="width: 300px"><a href="sample_content/boat.jpg"><img src="sample_content/boat.jpg" alt="" title="boat" width="300" height="198" class="size-medium wp-image-544" /></a><p class="wp-caption-text">A picture is worth a thousand words</p></div> <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
@@ -232,106 +237,120 @@
 		<h3>No alignment, with caption</h3>
 		<p>None-aligned image with caption, and text before and after.</p> <div id="attachment_547" class="wp-caption alignnone" style="width: 300px"><a href="sample_content/boat.jpg"><img src="sample_content/boat.jpg" alt="" title="boat" width="300" height="198" class="size-medium wp-image-544" /></a><p class="wp-caption-text">A picture is worth a thousand words</p></div><p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed odio nibh, tincidunt adipiscing, pretium nec, tincidunt id, enim. Fusce scelerisque nunc vitae nisl. Quisque quis urna in velit dictum pellentesque. Vivamus a quam. Curabitur eu tortor id turpis tristique adipiscing. Morbi blandit. Maecenas vel est. Nunc aliquam, orci at accumsan commodo, libero nibh euismod augue, a ullamcorper velit dui et purus. Aenean volutpat, ipsum ac imperdiet fermentum, dui dui suscipit arcu, vitae dictum purus diam ac ligula.</p>
 
-		<h2>Other Image Tests</h2>
-		<h3 id="wide-image-resized-in-editor">Wide Image, Resized In Editor</h3>
-		<p>Image is 900x598px, resized in editor to 329&#215;222.</p>
-		<p><img width="329" height="222" alt="test-image-landscape-900" class="alignnone size-full" src="sample_content/test-image-landscape-900.jpg"></p>
-		<h3 id="wide-image-not-resized">Wide Image, Not Resized</h3>
-		<p>Image is 900x598px, not resized in editor, and does not overflow outside of the content area.</p>
-		<p><img width="900" height="598" src="sample_content/test-image-landscape-900.jpg?w=900" class="alignnone size-full" alt="test-image-landscape-900" /></p>
-		<h3 id="image-thumbnails">Image Thumbnails</h3>
-		<p><img src="sample_content/test-image-portrait.jpg?w=99" alt="" title="test-image-portrait" width="99" height="150" class="alignnone size-thumbnail wp-image-536" /><img src="sample_content/test-image-landscape.jpg?w=150" alt="" title="test-image-landscape" width="150" height="99" class="alignnone size-thumbnail wp-image-535" /></p>
 
-		<h1>Lightbox test</h1>
-		<h2>Test obrazku:</h2>
-		<p>Obrazek jen tak:</p>
-		<p><img class="alignnone size-medium wp-image-2276" alt="IMG_8280" src="sample_content/test-image-landscape.jpg" width="300" height="199" /></p>
-		<p>obrazek s odkazem:</p>
-		<p><a href="sample_content/test-image-landscape-200x200.jpg" rel="attachment wp-att-2276"><img class="alignnone size-medium wp-image-2276" alt="IMG_8280" src="sample_content/test-image-landscape-100x100.jpg" width="300" height="199" /></a></p>
-		<p>obrazek se zarovnanim:</p>
-		<p><img class="aligncenter size-medium wp-image-2276" alt="IMG_8280" src="sample_content/test-image-landscape.jpg" width="300" height="199" /></p>
-		<p>se zarovnanim a odkazem:</p>
-		<p><a href="sample_content/test-image-landscape.jpg"><img class="alignright size-medium wp-image-2276" alt="IMG_8280" src="sample_content/test-image-landscape-100x100.jpg" width="300" height="199" /></a></p>
-		<p>se zarovnanim a odkazem na sebe:</p>
-		<p><a href="sample_content/test-image-landscape.jpg"><img class="alignright size-medium wp-image-2276" alt="IMG_8280" src="sample_content/test-image-landscape.jpg" width="300" height="199" /></a></p>
-
-		<div style="clear:both;"></div>
-
-		<h1 class="entry-title">Post Format Test: Gallery</h1>
-		<style type='text/css'>
-			#gallery-1 {
-				margin: auto;
-			}
-			#gallery-1 .gallery-item {
-				float: left;
-				margin-top: 10px;
-				text-align: center;
-				width: 33%;
-			}
-			#gallery-1 img {
-				border: 2px solid #cfcfcf;
-			}
-			#gallery-1 .gallery-caption {
-				margin-left: 0;
-			}
-		</style>
-		<!-- see gallery_shortcode() in wp-includes/media.php -->
-		<div id='gallery-1' class='gallery galleryid-555 gallery-columns-3 gallery-size-thumbnail'><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/canola2-150x150.jpg' title='canola2'><img width="150" height="150" src="sample_content/canola2-150x150.jpg" class="attachment-thumbnail" alt="canola" /></a>
-			</dt>
-			<dd class='wp-caption-text gallery-caption'>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec mollis. Quisque convallis libero in sapien pharetra tincidunt. Aliquam elit ante, malesuada id, tempor eu, gravida id, odio. Maecenas suscipit, risus et eleifend imperdiet, nisi orci ullamcorper massa, et adipiscing orci velit quis magna.
-			</dd></dl><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/dsc20050315_145007_132-150x150.jpg' title='dsc20050315_145007_132'><img width="150" height="150" src="sample_content/dsc20050315_145007_132-150x150.jpg" class="attachment-thumbnail" alt="dsc20050315_145007_132" /></a>
-			</dt></dl><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/dsc20050727_091048_222-150x150.jpg' title='dsc20050727_091048_222'><img width="150" height="150" src="sample_content/dsc20050727_091048_222-150x150.jpg" class="attachment-thumbnail" alt="dsc20050727_091048_222" /></a>
-			</dt></dl><br style="clear: both" /><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/dsc20050813_115856_52-150x150.jpg' title='dsc20050813_115856_52'><img width="150" height="150" src="sample_content/dsc20050813_115856_52-150x150.jpg" class="attachment-thumbnail" alt="dsc20050813_115856_52" /></a>
-			</dt></dl><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/dsc20050831_165238_332-150x150.jpg' title='dsc20050831_165238_332'><img width="150" height="150" src="sample_content/dsc20050831_165238_332-150x150.jpg" class="attachment-thumbnail" alt="dsc20050831_165238_332" /></a>
-			</dt></dl><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/dsc20050901_105100_212-150x150.jpg' title='dsc20050901_105100_212'><img width="150" height="150" src="sample_content/dsc20050901_105100_212-150x150.jpg" class="attachment-thumbnail" alt="Seed pods on stem, Woodvale" /></a>
-			</dt>
-			<dd class='wp-caption-text gallery-caption'>
-				Seed pods on stem, Woodvale
-			</dd></dl><br style="clear: both" /><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/100_5478-150x150.jpg' title='Bell on Wharf'><img width="150" height="150" src="sample_content/100_5478-150x150.jpg" class="attachment-thumbnail" alt="Bell on Wharf" /></a>
-			</dt>
-			<dd class='wp-caption-text gallery-caption'>
-				Bell on wharf in San Francisco
-			</dd></dl><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/100_5540-150x150.jpg' title='Golden Gate Bridge'><img width="150" height="150" src="sample_content/100_5540-150x150.jpg" class="attachment-thumbnail" alt="Golden Gate Bridge" /></a>
-			</dt>
-			<dd class='wp-caption-text gallery-caption'>
-				Golden Gate Bridge
-			</dd></dl><dl class='gallery-item'>
-			<dt class='gallery-icon'>
-				<a href='sample_content/cep00032-150x150.jpg' title='Sunburst Over River'><img width="150" height="150" src="sample_content/cep00032-150x150.jpg" class="attachment-thumbnail" alt="Sunburst Over River" /></a>
-			</dt>
-			<dd class='wp-caption-text gallery-caption'>
-				Sunburst over the Clinch River, Southwest Virginia.
-			</dd></dl></div><br style="clear: both" />
 
 	</article>
 
 </div>
 
+<section class="sponsors">
+
+	<div class="sponsors__item">
+		<img src="images/sponsors_univ2.png" alt="Univ2" width="70" height="73"/>
+	</div>
+
+	<div class="sponsors__item">
+		<img src="images/sponsors_projekt_tera.png" alt="Univ2" width="180" height="81"/>
+	</div>
+
+	<div class="sponsors__item">
+		<img src="images/sponsors_esf.png" alt="Univ2" width="400" height="67"/>
+	</div>
+
+</section>
+
+<section class="kontakty">
+	<div class="kontakty__inner">
+
+		<h2 class="kontakty__heading">Kontakty na učitele</h2>
+
+		<table class="kontakty__table">
+			<thead>
+				<tr>
+					<th>Jméno a Příjmení</th>
+					<th>Telefon</th>
+					<th>E-mail</th>
+					<th>Třída</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr itemscope itemtype="https://schema.org/Person">
+					<td itemprop="name">Vladimír Čert</td>
+					<td itemprop="telephone">573 333 514</td>
+					<td><a href="" itemprop="email">nekdo.nekdo@neco.cz</a></td>
+					<td>IV.A</td>
+				</tr>
+				<tr>
+					<td>Vladimír Čert</td>
+					<td>573 333 514</td>
+					<td><a href="">nekdo.nekdo@neco.cz</a></td>
+					<td>IV.A</td>
+				</tr>
+				<tr>
+					<td>Vladimír Čert</td>
+					<td>573 333 514</td>
+					<td><a href="">nekdo.nekdo@neco.cz</a></td>
+					<td>IV.A</td>
+				</tr>
+				<tr>
+					<td>Vladimír Čert</td>
+					<td>573 333 514</td>
+					<td><a href="">nekdo.nekdo@neco.cz</a></td>
+					<td>IV.A</td>
+				</tr>
+
+			</tbody>
+		</table>
+
+	</div>
+</section>
+
+<section class="o_skole content_typo">
+
+	<h1><span class="heading_icon" aria-hidden="true"><svg><use xlink:href="#icon-building"></use></svg></span>Obecně o škole</h1>
+
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae expedita impedit soluta. Alias dolor expedita
+		laborum maiores maxime, pariatur possimus quae quaerat quod reiciendis sed sequi similique vitae. Alias
+		cupiditate deserunt distinctio dolore eius eligendi error, est et, expedita necessitatibus perspiciatis, quaerat
+		quo ratione tempora temporibus vel veniam! Beatae eligendi fuga illum iusto laboriosam laborum porro tempore
+		unde! A ab, ad alias aspernatur aut corporis cumque dignissimos eius et eum eveniet facere facilis fuga impedit
+		incidunt laboriosam laudantium maiores modi natus nemo nisi provident quaerat quas repellendus ullam unde ut
+		vero. Autem excepturi expedita explicabo iusto libero modi similique veniam!</p>
+
+</section>
+
+<footer class="main_footer" role="contentinfo">
+	<div class="main_footer__inner">
+
+		<div class="main_footer__meta">
+			<nav class="main_footer__meta__menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				<ul class="main_footer__meta__menu__ul">
+					<li class="main_footer__meta__menu__ul__item"><a href="" itemprop="url name">Obecně o škole</a></li>
+					<li class="main_footer__meta__menu__ul__item"><a href="" itemprop="url name">Kontakty na zaměstnance</a></li>
+					<li class="main_footer__meta__menu__ul__item"><a href="" itemprop="url name">Administrace</a></li>
+				</ul>
+			</nav>
+			&copy; Copyright 2015, Všechna práva vyhrazena.
+		</div>
+
+		<div class="main_footer__copyright">
+			Návrh a grafika: <a href="">www.MarekHorava.cz</a><br/>
+			Programování: <a href="">www.LumiArt.cz</a>
+		</div>
+
+	</div>
+</footer>
+
+<button class="scroll_to_top" role="button">Nahoru</button>
+
+
 <script type="text/javascript" src="js/libs/jquery-2.1.3.js"></script>
 <script type="text/javascript" src="js/libs/velocity.js"></script>
 <script type="text/javascript" src="js/libs/picturefill.js"></script>
-<script type="text/javascript" src="js/libs/owl.carousel.js"></script> <!-- jq -->
 <script type="text/javascript" src="js/libs/modernizr.js"></script>
 
 <script type="text/javascript" src="js/header_menu.js"></script><!-- jquery, velocity -->
-<script type="text/javascript" src="js/owl_carousel.js"></script><!-- jquery -->
+<script type="text/javascript" src="js/scroll_to_top.js"></script><!-- jquery -->
 
 </body>
 </html>

@@ -204,8 +204,10 @@ body {
 
 @import "inc/owl.carousel";
 
+$header_overflow_height: 31px;
+
 .main_slider {
-	margin-top: -31px;
+	margin-top: -$header_overflow_height;
 	z-index: 10;
 	position: relative;
 	}
@@ -274,6 +276,11 @@ body {
 .quick_links {
 	background: #FFF;
 	margin-bottom: rhythm(1);
+
+		&.is-wo_slider {
+			margin-top: -$header_overflow_height;
+			padding-top: 15px;
+		}
 
 	}
 	.quick_links__wrap {
@@ -453,10 +460,7 @@ body {
 
 .heading_icon {
 	color: #FFF;
-	$color1: $bubble_orange;
-	$color2: lighten( $bubble_orange, 15% );
-	background-color: $color1;
-	background: linear-gradient( 135deg, $color1 0, $color1 50%, $color2 50%, $color2 100% );
+	@include heading_icon_background( $bubble_orange );
 	border-radius: 100%;
 	display: inline-block;
 	$size: 50px;
@@ -487,7 +491,7 @@ body {
 		.main_content__breadcrumbs__menu {
 			display: block;
 			}
-			.main_content__breadcrumbs__menu__item.main_content__breadcrumbs__menu__item {
+			.main_content__breadcrumbs__menu__item.main_content__breadcrumbs__menu__item.main_content__breadcrumbs__menu__item { //TODO: refactor this for gods sake
 				display: inline-block;
 
 					a {

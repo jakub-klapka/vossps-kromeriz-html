@@ -47,6 +47,84 @@
 				}
 		}
 
+		.important_heading {
+			display: block;
+			background: $bubble_orange;
+			padding: 0 rhythm(1);
+			color: #FFF;
+			@include rhythm-text( 18px );
+		}
+
+		table {
+			@include rhythm-text( 12px );
+			border-spacing: 2px;
+			border-collapse: separate;
+
+				th {
+					color: $bubble_orange;
+					@include rhythm-text( 14px );
+					font-family: $encode_sans;
+					font-weight: bold;
+				}
+
+				td, th {
+					padding: rhythm(0.5);
+				}
+
+				td {
+					background: rgba( $bubble_orange, 0.2 );
+					transition-property: background-color, color;
+					transition-duration: 200ms;
+				}
+
+				tr:hover td {
+					background: $bubble_orange;
+					color: #FFF;
+				}
+		}
+
+
+		/*
+		Colors
+		*/
+		$schemes: (
+			dalsi_vzdelavani: $dalsi,
+			vyssi_odborne: $vyssi
+		);
+
+		@each $scheme, $color in $schemes {
+			&.is-#{$scheme} {
+
+				.heading_icon {
+					@include heading_icon_background( $color );
+				}
+
+				a {
+					color: $color;
+				}
+
+				.important_heading {
+					background: $color;
+				}
+
+				table {
+
+					th {
+						color: $color;
+					}
+
+					td {
+						background: rgba( $color, 0.2 );
+					}
+
+					tr:hover td {
+						background: $color;
+					}
+				}
+
+			}
+		}
+
 
 		/* =WordPress Core
 	-------------------------------------------------------------- */
