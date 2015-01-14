@@ -5,6 +5,7 @@ var gulp = require( 'gulp' ),
 	imagemin = require( 'gulp-imagemin' ),
 	svg_store = require( 'gulp-svgstore' ),
 	filter = require( 'gulp-filter' ),
+	uglify = require( 'gulp-uglify' ),
 	livereload = require( 'gulp-livereload' );
 
 var plumber_config = {
@@ -21,7 +22,9 @@ gulp.task( 'sass', function(){
 	var maps_filter = filter( [ '*', '!*.map' ] );
 	return gulp.src( 'src/sass/**/*.scss', { base: 'src/sass' } )
 		.pipe( plumber( plumber_config ) )
-		.pipe( sass() )
+		.pipe( sass( {
+			style: 'compressed'
+		} ) )
 		.pipe( maps_filter )
 		.pipe( autoprefixer() )
 		.pipe( gulp.dest( 'build/css' ) );
@@ -74,6 +77,16 @@ gulp.task( 'fonts_watch', function(){
 } );
 
 
+/*
+JS
+ */
+gulp.task( 'js', function() {
+	return gulp.src( 'src/js/**/*.js', { base: 'src/js' } )
+		.pipe( plumber( plumber_config ) )
+		.pipe( uglify() )
+		.pipe( gulp.dest( 'build/js' ) );
+} );
+
 
 /*
 Livereload
@@ -88,5 +101,5 @@ gulp.task( 'livereload', function(){
 /*
 Tasks
  */
-gulp.task( 'default', [ 'sass', 'images', 'svg', 'fonts' ] );
+gulp.task( 'default', [ 'sass', 'images', 'svg', 'fonts', 'js' ] );
 gulp.task( 'dev', [ 'sass_watch', 'livereload', 'images_watch', 'svg_watch', 'fonts_watch' ] );

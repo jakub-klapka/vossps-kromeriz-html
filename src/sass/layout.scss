@@ -374,7 +374,7 @@ $header_overflow_height: 31px;
 				display: block;
 				margin-bottom: rhythm(1);
 
-					a {
+					> a {
 						display: flex;
 						flex-direction: column;
 						justify-content: center;
@@ -401,19 +401,47 @@ $header_overflow_height: 31px;
 								display: block;
 							}
 					}
+					.main_sidebar__nav__ul__submenu {
+
+						}
+						.main_sidebar__nav__ul__submenu__item {
+
+							a {
+								display: block;
+								margin-top: rhythm(0.5);
+								text-align: center;
+								padding: rhythm(0.5);
+								color: $text_grey;
+								@include rhythm-text( 15px );
+								font-family: $encode_sans;
+								background: $stredoskolske_sub;
+							}
+
+							&:hover a {
+								background: darken( $stredoskolske_sub, 10% );
+							}
+
+							&.is-active a {
+								background: $stredoskolske;
+								color: #FFF;
+							}
+						}
 
 					$types: (
 						stredoskolske: (
 							main: $stredoskolske,
-							light: $stredoskolske_light
+							light: $stredoskolske_light,
+							sub: $stredoskolske_sub
 						),
 						vyssi: (
 							main: $vyssi,
-							light: $vyssi_light
+							light: $vyssi_light,
+							sub: $vyssi_sub
 						),
 						dalsi: (
 							main: $dalsi,
-							light: $dalsi_light
+							light: $dalsi_light,
+							sub: $dalsi_sub
 						)
 					);
 
@@ -434,8 +462,23 @@ $header_overflow_height: 31px;
 							.main_sidebar__nav__ul__item__icon {
 								background: map-get( $colors, 'light' );
 							}
+							.main_sidebar__nav__ul__submenu__item {
+
+								a {
+									background: map-get( $colors, 'sub' );
+								}
+
+								&:hover a {
+									background: darken( map-get( $colors, 'sub' ), 10% );
+								}
+
+								&.is-active a {
+									background: map-get( $colors, 'main' );
+								}
+							}
 						}
 					}
+
 
 
 				}
