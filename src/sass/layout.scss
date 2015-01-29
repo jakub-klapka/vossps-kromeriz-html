@@ -571,6 +571,12 @@ $header_overflow_height: 31px;
 
 			@include separator();
 
+				&::after {
+					content: '';
+					display: table;
+					clear: both;
+				}
+
 			}
 			.main_content__news__item__image.main_content__news__item__image {
 				float: left;
