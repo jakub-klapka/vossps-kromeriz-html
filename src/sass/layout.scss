@@ -557,7 +557,7 @@ $header_overflow_height: 31px;
 					}
 
 					&:last-child::after {
-						content: '';
+						display: none;
 					}
 			}
 
@@ -588,7 +588,7 @@ $header_overflow_height: 31px;
 					}
 			}
 
-		.main_content__news__item__more_link.main_content__news__item__more_link {
+		.main_content__news__item__more_link.main_content__news__item__more_link.main_content__news__item__more_link {
 			font-family: $encode_sans;
 			@include rhythm-text( 13px, 2 );
 			display: inline-block;
