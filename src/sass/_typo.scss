@@ -60,7 +60,7 @@
 			border-spacing: 2px;
 			border-collapse: separate;
 
-				th {
+				thead td, th {
 					color: $bubble_orange;
 					@include rhythm-text( 14px );
 					font-family: $encode_sans;
@@ -71,13 +71,13 @@
 					padding: rhythm(0.5);
 				}
 
-				td {
+				tbody td {
 					background: rgba( $bubble_orange, 0.2 );
 					transition-property: background-color, color;
 					transition-duration: 200ms;
 				}
 
-				tr:hover td {
+				tbody tr:hover td {
 					background: $bubble_orange;
 					color: #FFF;
 				}
@@ -109,15 +109,15 @@
 
 				table {
 
-					th {
+					thead td, th {
 						color: $color;
 					}
 
-					td {
+					tbody td {
 						background: rgba( $color, 0.2 );
 					}
 
-					tr:hover td {
+					tbody tr:hover td {
 						background: $color;
 					}
 				}

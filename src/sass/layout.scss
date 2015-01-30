@@ -593,7 +593,7 @@ $header_overflow_height: 31px;
 			@include rhythm-text( 13px, 2 );
 			display: inline-block;
 			clear: both;
-			background: $bubble_orange;
+			background: $stredoskolske;
 			border-radius: 2px;
 			color: #FFF;
 			text-decoration: none;
@@ -602,9 +602,27 @@ $header_overflow_height: 31px;
 			transition: background-color 200ms;
 
 				&:hover {
-					background-color: darken( $bubble_orange, 10% );
+					background-color: $stredoskolske_light;
 					color: #FFF;
 				}
+
+				.is-vyssi_odborne & {
+					background-color: $vyssi;
+
+						&:hover {
+							background-color: $vyssi_light;
+						}
+				}
+
+				.is-dalsi_vzdelavani & {
+					background-color: $dalsi;
+
+						&:hover {
+							background-color: $dalsi_light;
+						}
+				}
+
+
 		}
 
 	.main_content__news__pagination.main_content__news__pagination {
