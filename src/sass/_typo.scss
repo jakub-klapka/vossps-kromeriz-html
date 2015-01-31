@@ -1,6 +1,6 @@
 @import "global";
 
-.content_typo {
+@mixin typo() {
 
 	color: $text_grey;
 	font-family: arial, sans-serif;

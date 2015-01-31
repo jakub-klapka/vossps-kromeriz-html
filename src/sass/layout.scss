@@ -675,6 +675,10 @@ $header_overflow_height: 31px;
 
 @import "typo";
 
+.content_typo {
+	@include typo();
+}
+
 $sponsors_margin_width: 10px;
 .sponsors {
 
