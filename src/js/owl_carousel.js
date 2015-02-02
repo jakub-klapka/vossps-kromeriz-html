@@ -5,9 +5,11 @@
 
 	$( function(){
 
-		var owl_el = $( '#main_slider' ).owlCarousel( {
+		var wraper = $( '#main_slider' );
+
+		var owl_el = wraper.owlCarousel( {
 			singleItem: true,
-			autoPlay: true,
+			autoPlay: wraper.data( 'timeout' ),
 			stopOnHover: true,
 			responsiveBaseWidth: '.main_slider'
 		} );
