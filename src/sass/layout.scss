@@ -222,8 +222,9 @@ $header_overflow_height: 31px;
 		overflow: hidden;
 
 			img {
-				height: $slider_height;
-				width: auto;
+				height: auto;
+				min-width: 100%;
+				min-height: 100%;
 				display: block;
 				position: absolute;
 				left: 50%;
