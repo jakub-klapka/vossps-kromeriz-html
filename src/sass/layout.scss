@@ -420,6 +420,7 @@ $header_overflow_height: 31px;
 								@include rhythm-text( 15px );
 								font-family: $encode_sans;
 								background: $stredoskolske_sub;
+								font-weight: bold;
 							}
 
 							&:hover a {
@@ -878,5 +879,16 @@ $footer_link_color: lighten( $text_grey, 50% );
 
 		&:hover {
 			background-color: darken( $bubble_orange, 20% );
+		}
+}
+
+.home_heading_zakovska {
+	display: block;
+	float: right;
+
+		&__image {
+			display: block;
+			width: 179px;
+			height: 52px;
 		}
 }
