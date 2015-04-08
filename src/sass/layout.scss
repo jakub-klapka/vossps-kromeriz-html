@@ -405,7 +405,27 @@ $header_overflow_height: 31px;
 								max-width: 100%; //IE flexbox fix
 								display: block;
 							}
+
 					}
+
+					&.is-image_link > a {
+						height: auto;
+
+							img {
+								display: block;
+							}
+					}
+
+					&.is-text_link > a {
+						background: $text_grey;
+						height: 50px;
+						transition: background-color 300ms;
+
+							&:hover {
+								background: darken( $text_grey, 10% );
+							}
+					}
+
 					.main_sidebar__nav__ul__submenu {
 
 						}
@@ -879,6 +899,12 @@ $footer_link_color: lighten( $text_grey, 50% );
 
 		&:hover {
 			background-color: darken( $bubble_orange, 20% );
+		}
+
+		@include respond-to( 'max-width', 1170px ) {
+			margin-left: 0;
+			left: auto;
+			right: 20px;
 		}
 }
 
